@@ -148,7 +148,12 @@ $(function(){
                     arr[a.i][a.j] = Math.random()>0.8?4:2;
                 }else{
                     if(checkGameOk()){
-                        alert("gameover");
+                        var firm = confirm(" 游戏结束！ \n \n 点击确定重新开始。 \n ");
+                        if(firm){
+                            setTimeout(function(){
+                                initGame(init);
+                            },0);
+                        }
                     }
                 }
                 if(index&&whichArr.length){
@@ -207,11 +212,12 @@ $(function(){
                 bindClick("#down","click",actionChoice);
                 bindClick("#left","click",actionChoice);
             }
-            initGame({
-                arrLength:4,
-                randomNum:2,
-                showTable:"#art"
-            });
+            var init = {
+                arrLength:4,//矩阵长度
+                randomNum:2,//初始数目
+                showTable:"#art"//展示到此table
+            };
+            initGame(init);
             bindClick("#select","change",function(item,that){
                 initGame({
                     arrLength:$(that).val(),

@@ -1,0 +1,32 @@
+        #control{
+            margin: auto;
+            width: 240px;
+            height: 240px;
+        }
+        #control td{
+            width:80px;
+            height:80px;
+            text-align: center;
+            font-size: 24px;
+        }
+        #up,#right,#down,#left{
+            cursor: pointer;
+        }
+        #art{
+            margin: auto;
+        }
+        #art td{
+            width:100px;
+            height:100px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .scoreShow{
+            width:100%;
+            margin:auto;
+            margin-bottom: 10px;
+        }
+        .scoreShow td{
+            text-align:center;
+            width:33.33%;
+        }
